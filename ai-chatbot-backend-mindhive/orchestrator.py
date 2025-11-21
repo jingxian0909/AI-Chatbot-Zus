@@ -2,6 +2,7 @@ from planner import Planner
 from calculator import SafeCalculator
 import requests
 import json
+import os
 
 conv_history = []
 
@@ -9,7 +10,7 @@ class Orchestrator:
     def __init__(self):
         self.planner = Planner()
         self.calculator = SafeCalculator()
-        self.api_base = "http://localhost:8000/api"
+        self.api_base = os.getenv("API_BASE_URL")
 
     @staticmethod
     def formatConvHistory(messages):

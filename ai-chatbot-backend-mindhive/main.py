@@ -8,7 +8,7 @@ app = FastAPI(title="Mindhive Chatbot API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # In production, replace * with your frontend's URL
+    allow_origins=["*"],  # In production, replace * with your frontend's URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
