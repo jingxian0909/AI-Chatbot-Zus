@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Coffee, MapPin, Calculator, RotateCcw } from 'lucide-react';
 
 const ZusChatbot = () => {
+const apiBase = process.env.REACT_APP_API_BASE_URL;
  const [messages, setMessages] = useState(() => {
   const saved = localStorage.getItem('zus-chat-history');
   return saved
@@ -76,7 +77,7 @@ const ZusChatbot = () => {
 
       setIsTyping(true);
         try {
-        const res = await fetch("http://localhost:8000/api/chat", {
+        const res = await fetch(`${apiBase}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
@@ -113,7 +114,7 @@ const ZusChatbot = () => {
     } else{
         setIsTyping(true);
         try {
-        const res = await fetch("http://localhost:8000/api/chat", {
+        const res = await fetch(`${apiBase}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
