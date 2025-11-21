@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.venv/
+env/
+
+# Env secrets
+.env
+.env.*
+!.env.example
+
+# Runtime files
+*.db
+product.index
+product_meta.pkl
+logs/
+tmp/
+
+# Model artifacts
+*.bin
+*.pt
+*.onnx
+
+# OS / IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Local scratch
+*.log
