@@ -88,10 +88,10 @@ def main():
         print(f"* {res.page_content} [{res.metadata}]")
 
 if __name__ == "__main__":
-    #products = load_docs("zus_products_readable.txt")
-    #data = preprocess_chunks(products)
-    #ingest_to_pinecone(data)
-    main()
+    products = load_docs("zus_products_readable.txt")
+    data = preprocess_chunks(products)
+    ingest_to_pinecone(data)
+    #main()
 
 
     
